@@ -1,0 +1,30 @@
+.about .imagen {
+  margin-top: 10%;
+  width: 100%;
+}
+.about .imagen img {
+  width: 10%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+@media (max-width: 414px) {
+  .about .imagen {
+    margin-top: 30%;
+    width: 100%;
+  }
+
+  .about .imagen img {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1720px) {
+  .about .imagen {
+    margin-top: 10%;
+  }
+  .about .imagen img {
+    width: 5%;
+  }
+}
