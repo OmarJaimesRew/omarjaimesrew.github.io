@@ -21,6 +21,13 @@
   <link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
   <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
+  <style>
+    .porn_glitch_video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  </style>
 
 </head>
 
@@ -300,6 +307,45 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      function setupModal(modal) {
+        var video = modal.querySelector("video");
+        if (!video) {
+          return;
+        }
+
+        function onShow() {
+          if (video.readyState < 4) {
+            video.load();
+          }
+          var playPromise = video.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(function () {
+              // Autoplay can be blocked by the browser; keep controls visible.
+            });
+          }
+        }
+
+        function onHide() {
+          video.pause();
+        }
+
+        if (window.jQuery && typeof window.jQuery === "function") {
+          window.jQuery(modal).on("shown.bs.modal", onShow);
+          window.jQuery(modal).on("hidden.bs.modal", onHide);
+        } else {
+          modal.addEventListener("shown.bs.modal", onShow);
+          modal.addEventListener("hidden.bs.modal", onHide);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var modals = document.querySelectorAll(".modal");
+        modals.forEach(setupModal);
+      });
+    })();
+  </script>
 
 </body>
 
