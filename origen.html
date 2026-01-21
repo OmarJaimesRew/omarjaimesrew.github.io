@@ -1,69 +1,79 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
   <title> Origen </title>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1,maximum-scale=1, minimum-scale=1">
-  <!DOCTYPE html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 
-  <link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
-  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <style>
+    #origen-sketch {
+      width: 100%;
+      max-width: 854px;
+      margin: 0 auto;
+    }
 
+    #origen-sketch canvas {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      cursor: pointer;
+    }
 
+    .canvas-instructions {
+      margin-top: 0.75em;
+      font-size: 0.75em;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/addons/p5.sound.min.js"></script>
 </head>
 
 <body>
 
   <header>
-
     <div class="contenedor">
       <div>
         <a href="about.html">
           <h1>OMAR JAIMES REW </h1>
         </a>
 
-
         <input type="checkbox" id="menu-bar">
         <label class="icon-menu-outline" for="menu-bar"></label>
 
         <nav class="menu">
-	      <a href="artwork.html">ArtWork</a>
-				<a href="collaborations.html">Collaborations</a>
-				<a href="curator.html">Curator</a>
-				<a href="papers.html">Papers</a>
-				<a href="news.html">News</a>
-				<a href="about.html">About</a>
-
-
-
+          <a href="artwork.html">ArtWork</a>
+          <a href="collaborations.html">Collaborations</a>
+          <a href="curator.html">Curator</a>
+          <a href="papers.html">Papers</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
         </nav>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/117639592?color=ff0059&portrait=0"
-        style="position:absolute;top:2.5em;left:5%;width:90%;height:100%;" frameborder="0" allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
+    <section class="contenedor" style="padding-top:4.5em;">
+      <div id="origen-sketch"></div>
+      <p class="canvas-instructions">Instrucciones: mueve el cursor para estimular la flor.</p>
     </section>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-
 
     <section class="contenedor">
-
-
       <p style="text-align:justify"> <b>El origen</b><br><br>
         El origen es una pieza audio visual que consiste en un video en capas de una flor que necesita ser estimulada
         por el espectador para que esta
-        florezca. Utilizando Processing se logra crear un video que necesita ser provocado, mientras el mouse este en
+        florezca. Utilizando Processing se logra crear un video que necesita ser provocado, mientras el mouse esté en
         movimiento la imagen correrá hacia
-        adelante, la flor se estará abriendo, de igual forma el audio sonará solo mientras el cursor este en movimiento.
+        adelante, la flor se estará abriendo, de igual forma el audio sonará solo mientras el cursor esté en movimiento.
         En cuanto se deja de mover el cursor
-        el video corre hacia atrás, la flor comienza a cerrarse y el audio dejara de sonar.
+        el video corre hacia atrás, la flor comienza a cerrarse y el audio dejará de sonar.
         La intención de la pieza es crear una metáfora de la caricia, de la masturbación femenina y la analogía entre la
         flor, lo femenino y la vagina. Se
         pretende poner al espectador dentro de un mecanismo interactivo que pueda remitir al acto sexual en un espacio
@@ -71,37 +81,37 @@
         de revelar una acción que solo se manifiesta en lo íntimo la pieza es un mecanismo que evidencia al espectador
         en el acto sexual.</p>
     </section>
+  </main>
 
+  <footer>
+    <div class="piePagina">
+      <p class="copy" style="text-align:center">Omar Jaimes Rew &copy;2025</p>
 
-
-
-    <footer>
-      <div class="piePagina">
-        <p align="center" class="copy">Omar Jaimes Rew &copy;2025</p>
-
-        <div class="sociales">
-          <a href="https://www.facebook.com/OmarJaimesRewOficial" target="_blank">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a href="https://www.instagram.com/omar.jaimesrew/?hl=es-la" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://omar-jaimes-rew.tumblr.com/" target="_blank">
-            <i class="fab fa-tumblr"></i>
-          </a>
-          <a href="https://vimeo.com/omarjaimesrew" target="_blank">
-            <i class="fab fa-vimeo-v"></i>
-          </a>
-          <a href="https://www.behance.net/user/?username=rewomar" target="_blank">
-            <i class="fab fa-behance"></i>
-          </a>
-          <a href="https://www.tiktok.com/@omarjaimesrew" target="_blank">
-            <i class="fab fa-tiktok"></i>
-          </a>
-          <br><br>
-        </div>
+      <div class="sociales">
+        <a href="https://www.facebook.com/OmarJaimesRewOficial" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com/omar.jaimesrew/?hl=es-la" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://omar-jaimes-rew.tumblr.com/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-tumblr"></i>
+        </a>
+        <a href="https://vimeo.com/omarjaimesrew" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-vimeo-v"></i>
+        </a>
+        <a href="https://www.behance.net/user/?username=rewomar" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-behance"></i>
+        </a>
+        <a href="https://www.tiktok.com/@omarjaimesrew" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <br><br>
       </div>
-    </footer>
+    </div>
+  </footer>
+
+  <script src="origen-sketch.js"></script>
 </body>
 
 </html>
