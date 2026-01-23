@@ -34,15 +34,7 @@
   </header>
 
   <main>
-    <section id="banner" data-captions='[
-      "AUTORRETRATO IMPOSIBLE MAQUINAL\n 2021",
-      "WAVE\n2021\n ",
-      "AFORISMOS\n2025\nANGÉL GOMÉZ + OMAR JAIMES REW",
-      "PORN GLITCH CAMUFLAGUE \n 2017",
-      "DESIGUALDAD TONAL\n2023",
-      "Desaparición\n Vídeo loop /remix\n2016",
-      "AUTORRETRATO COMPARTIDO\n2021"
-    ]'>
+    <section id="banner" data-captions='["AUTORRETRATO IMPOSIBLE\n2021","WAVE\n2021","AFORISMOS\n2025","PORN GLITCH\n2017","DESIGUALDAD TONAL\n2023","DESAPARICI?N\n2016","AUTORRETRATO COMPARTIDO\n2021"]'>
       <video autoplay muted loop playsinline>
         <source src="videos/A_I_.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
@@ -66,6 +58,8 @@
 
     ];
     const topVideo = 'videos/desigualdad_tonal_home1.mp4';
+    const fadeVideo = topVideo;
+    const portraitWideVideo = 'videos/Autorretrato_Imposible_Home.mp4';
     let current = 0;
 
     const section = document.getElementById('banner');
@@ -81,6 +75,8 @@
       videoEl.play();
 
       videoEl.style.objectPosition = (reel[current] === topVideo) ? 'top center' : 'center center';
+      section.classList.toggle('fade-sides', reel[current] === fadeVideo);
+      section.classList.toggle('portrait-wide', reel[current] === portraitWideVideo);
 
       // Actualiza caption
       const caption = captions[current];

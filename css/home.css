@@ -51,6 +51,7 @@ html,body{
   text-transform: uppercase;
   font-size: clamp(7px, 0.6vw, 9px); /* Reducido el rango */
   width: 80%;
+  z-index: 3;
 }
 
 
@@ -67,7 +68,7 @@ html,body{
 
 
 .title {
-  font-size: clamp(2em, 2vw, 3em); /* Reducido el máximo */
+  font-size: clamp(1.12em, 1.12vw, 1.68em); /* Reducido el máximo */
   font-weight: 500;
   line-height: 1;
   margin-bottom: 0.3em;
@@ -106,7 +107,7 @@ html,body{
   }
   
   .title {
-    font-size: clamp(1.5em, 2vw, 3em); /* Ajustado para móviles */
+    font-size: clamp(0.84em, 1.12vw, 1.68em); /* Ajustado para móviles */
   }
 }
 
@@ -115,4 +116,58 @@ html,body{
   margin: 0;
   border: 0;
   border-radius: 0;
+}
+
+/* Fades laterales para video desigualdad_tonal en horizontal */
+@media (orientation: landscape) {
+  #banner.fade-sides video {
+    object-fit: contain;
+    object-position: center center;
+    background: #000;
+    height: 90vh;
+  }
+
+  #banner.fade-sides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #banner.fade-sides::before,
+  #banner.fade-sides::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 12vw;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  #banner.fade-sides::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  }
+
+  #banner.fade-sides::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  }
+}
+
+/* Ajuste a lo ancho para Autorretrato Imposible en vertical */
+@media (orientation: portrait) {
+  #banner.portrait-wide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #banner.portrait-wide video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    background: #000;
+  }
 }
