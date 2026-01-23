@@ -199,6 +199,11 @@ section {
   font-size: 1.1em;
 }
 
+.sinopsis p {
+  text-align: justify;
+  text-indent: 0;
+}
+
 .texto {
   font-size: 13px;
   margin: auto;
@@ -553,13 +558,50 @@ background-color:rgba(204, 16, 16, 0);
 
 /*Desaparición*/
 
- .desaparicion_vid{
-  position: relative;
-  width: auto;
-  height:200px;
-  margin-top: 0em;
- 
+.desaparicion_layout {
+  display: grid;
+  grid-template-columns: 0.55fr minmax(120px, 0.2fr) 0.72fr;
+  gap: 16px;
+  align-items: start;
+}
 
+.desaparicion_side {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.desaparicion_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desaparicion_vid {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.desaparicion_vid--side {
+  height: 40%;
+  object-fit: contain;
+}
+
+.desaparicion_vid--center {
+  width: auto;
+  height: 40%;
+}
+
+@media (max-width: 768px) {
+  .desaparicion_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .desaparicion_vid--center {
+    width: 60%;
+  }
 }
 
 /*autorretarto Imposible*/

@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 }
 
+.fascinus-page #blog .contenedor {
+  margin-top: 3em;
+}
+
 #blog article {
   margin: 0, 0;
   height: 150px;
@@ -150,6 +154,17 @@
   padding: 0;
   margin-bottom: 1em;
  
+}
+#blog video {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  margin-bottom: 1em;
+}
+#blog article.fascinus-video {
+  height: auto;
+  overflow: visible;
+  flex-direction: column;
 }
 .gif{
   position: absolute;
