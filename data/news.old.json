@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "titulo": "Bienvenido al Blog",
+        "fecha": "2026-02-09",
+        "tipo": "texto",
+        "media_url": "",
+        "descripcion": "Este es el inicio de la sección de noticias. Aquí podrás encontrar actualizaciones sobre mis proyectos, exposiciones e investigaciones recientes."
+    },
+    {
+        "id": 2,
+        "titulo": "Muestra de Obra: Desigualdad Tonal",
+        "fecha": "2025-11-15",
+        "tipo": "imagen",
+        "media_url": [
+            "img/desigualdadTonal.jpg",
+            "img/desigualdadTonal2.jpg"
+        ],
+        "descripcion": "Registro de la instalación interactiva presentada en el 404 Festival edición 2023. La obra explora la relación entre tono de piel y economía en México."
+    }
+]

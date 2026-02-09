@@ -16,21 +16,22 @@
   position: relative;
   display: flex;
   align-items: center;
-  
+
 }
-#blog .txt_img {  
-  background:none; 
+
+#blog .txt_img {
+  background: none;
   width: 100%;
   height: 100%;
   z-index: -1;
   color: rgb(246, 250, 248);
   font-size: 1.8em;
-  opacity:1;
+  opacity: 1;
   position: absolute;
-  
- display: flex;
- justify-content: center;
- align-items: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -42,7 +43,7 @@
 
 #blog .wave {
   background-color: rgb(55, 0, 255);
-  
+
 }
 
 
@@ -55,6 +56,7 @@
 #blog .glitch {
   background-color: rgba(0, 110, 255, 1);
 }
+
 #blog .glitch:hover {
   box-shadow: 0 0 100px #9f21f3, 0 0 40px rgba(0, 110, 255, 1);
   transition: 0.5s;
@@ -63,6 +65,7 @@
 #blog .fascinus {
   background-color: rgba(255, 60, 0, 0.527);
 }
+
 #blog .fascinus:hover {
   box-shadow: 0 0 10px #9f21f3, 0 0 200px rgba(0, 255, 170, 0.527);
   transition: 0.5s;
@@ -87,8 +90,9 @@
 
 #blog .origen {
   background-color: rgba(250, 113, 209, 0.685);
- 
+
 }
+
 #blog .origen:hover {
   box-shadow: 0 0 40px rgba(245, 113, 250, 0.685);
   transition: 0.5s;
@@ -97,6 +101,7 @@
 #blog .desaparicion {
   background-color: rgba(0, 0, 0, 1);
 }
+
 #blog .desaparicion:hover {
   box-shadow: 0 0 10px #9f21f3, 0 0 40px #f32160;
   transition: 0.5s;
@@ -104,8 +109,9 @@
 
 #blog .pop {
   background-color: rgba(250, 229, 113, 0.685);
- 
+
 }
+
 #blog .pop:hover {
   box-shadow: 0 0 40px rgba(250, 229, 113, 0.685);
   transition: 0.5s;
@@ -113,8 +119,9 @@
 
 #blog .puerta {
   background-color: rgba(8, 0, 3, 0.74);
- 
+
 }
+
 #blog .puerta:hover {
   box-shadow: 0 0 40px rgba(245, 4, 77, 0.685);
   transition: 0.5s;
@@ -122,8 +129,9 @@
 
 #blog .sound1 {
   background-color: rgb(252, 3, 94);
- 
+
 }
+
 #blog .sound1:hover {
   box-shadow: 0 0 40px rgba(245, 4, 77, 0.685);
   transition: 0.5s;
@@ -135,7 +143,7 @@
   cursor: pointer;
 }
 
- #blog article img:hover {
+#blog article img:hover {
   opacity: 0.5;
   -webkit-transition: opacity 5000ms;
   -moz-transition: opacity 5000ms;
@@ -143,36 +151,38 @@
   -ms-transition: opacity 5000ms;
   transition: opacity 1500ms;
 
-    
-  }
+
+}
 
 /*porno glitch*/
 #blog iframe {
   width: 100%;
   height: auto;
-  max-width: 250px; 
+  max-width: 250px;
   padding: 0;
   margin-bottom: 1em;
- 
+
 }
+
 #blog video {
   width: 100%;
   height: auto;
   max-width: 250px;
   margin-bottom: 1em;
 }
+
 #blog article.fascinus-video {
   height: auto;
   overflow: visible;
   flex-direction: column;
 }
-.gif{
-  position: absolute;
-  align-items: center;
-}
-.vid_liga{
+
+
+
+.vid_liga {
   margin-bottom: auto;
 }
+
 /*porno divino*/
 
 #blog .Pd3 img {
@@ -206,4 +216,57 @@
   height: auto;
   overflow: hidden;
   transform: translateY(50px);
+}
+
+
+/* Estilos para Investigación (Papers) */
+#blog .RetratoCompartido {
+  background-color: rgba(191, 230, 255, 0.1);
+  /* Cyan Neon */
+}
+
+#blog .RetratoCompartido:hover {
+  box-shadow: 0 0 10px #00ffea, 0 0 40px #00ffea;
+  transition: 0.5s;
+}
+
+#blog .RetratoCompartido img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  overflow: hidden;
+}
+
+#blog .RetratoImposible {
+  background-color: rgba(153, 0, 255, 0.1);
+  /* Purple Neon */
+}
+
+#blog .RetratoImposible:hover {
+  box-shadow: 0 0 10px #0400ff, 0 0 40px #0400ff;
+  transition: 0.5s;
+}
+
+#blog .RetratoImposible img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  overflow: hidden;
+}
+
+#blog .DesigualdadTonal {
+  background-color: rgba(255, 174, 0, 0.1);
+  /* Neon Gold */
+}
+
+#blog .DesigualdadTonal:hover {
+  box-shadow: 0 0 10px #ff6600, 0 0 40px #ff9100;
+  transition: 0.5s;
+}
+
+#blog .DesigualdadTonal img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  overflow: hidden;
 }

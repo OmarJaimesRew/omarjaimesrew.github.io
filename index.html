@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <title>Omar Jaimes Rew</title>
   <meta name="description" content="Omar Jaimes Rew | Artista visual, curador e investigador en arte contemporáneo...">
 
   <!-- Estilos globales y de portada -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- <link rel="stylesheet" href="css/estilos.css">
-<link rel="stylesheet" href="css/menu.css">
-<link rel="stylesheet" href="css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Play:wght@700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet">
 
- 
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/home.css">
+
+
 </head>
 
 <body class="home">
   <header>
     <div class="contenedor">
-      <a href="index.html"><h1>OMAR JAIMES REW</h1></a>
+      <a href="index.html">
+        <h1>OMAR JAIMES REW</h1>
+      </a>
       <input type="checkbox" id="menu-bar">
       <label for="menu-bar"><i class="fas fa-bars"></i></label>
       <nav class="menu">
-        	<a href="artwork.html">ArtWork</a>
-				<a href="collaborations.html">Colaboraci&oacute;n</a>
-				<a href="curator.html">Curadur&iacute;a</a>
-				<a href="papers.html">Investigaci&oacute;n</a>
-				<a href="news.html">Blog</a>
-				<a href="about.html">Bio</a>
+        <a href="artwork.html">ArtWork</a>
+        <a href="collaborations.html">Colaboraci&oacute;n</a>
+        <a href="curator.html">Curadur&iacute;a</a>
+        <a href="papers.html">Investigaci&oacute;n</a>
+        <a href="news.html">Blog</a>
+        <a href="about.html">Bio</a>
 
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="banner" data-captions='["AUTORRETRATO IMPOSIBLE\n2021","WAVE\n2021","AFORISMOS\n2025","PORN GLITCH\n2017","DESIGUALDAD TONAL\n2023","DESAPARICI?N\n2016","AUTORRETRATO COMPARTIDO\n2021"]'>
+    <section id="banner"
+      data-captions='["AUTORRETRATO IMPOSIBLE\n2021","WAVE\n2021","AFORISMOS\n2025","PORN GLITCH\n2017","DESIGUALDAD TONAL\n2023","DESAPARICI?N\n2016","AUTORRETRATO COMPARTIDO\n2021"]'>
       <video autoplay muted loop playsinline>
         <source src="videos/A_I_.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
@@ -46,77 +60,78 @@
 
   <!-- Script inline para reel y captions desde data-attribute -->
   <script>
-  (function() {
-    const reel = [
-      'videos/A_I_2M.mp4',
-      'videos/Wave_home_1.mp4',
-      'videos/Aforismos_home_1.mp4',
-      'videos/Porn_glitch_home_1.mp4',
-      'videos/desigualdad_tonal_home1.mp4',
-      'videos/d07_1_1.mp4',
-      'videos/Autorretrato_Imposible_Home.mp4'
+    (function () {
+      const reel = [
+        'videos/A_I_2M.mp4',
+        'videos/Wave_home_1.mp4',
+        'videos/Aforismos_home_1.mp4',
+        'videos/Porn_glitch_home_1.mp4',
+        'videos/desigualdad_tonal_home1.mp4',
+        'videos/d07_1_1.mp4',
+        'videos/Autorretrato_Imposible_Home.mp4'
 
-    ];
-    const topVideo = 'videos/desigualdad_tonal_home1.mp4';
-    const fadeVideo = topVideo;
-    const portraitWideVideo = 'videos/Autorretrato_Imposible_Home.mp4';
-    let current = 0;
+      ];
+      const topVideo = 'videos/desigualdad_tonal_home1.mp4';
+      const fadeVideo = topVideo;
+      const portraitWideVideo = 'videos/Autorretrato_Imposible_Home.mp4';
+      let current = 0;
 
-    const section = document.getElementById('banner');
-    const captions = JSON.parse(section.dataset.captions);
-    const videoEl  = section.querySelector('video');
-    const sourceEl = videoEl.querySelector('source');
-    const overlay  = section.querySelector('.overlay');
-    const changeInterval = 5000; // 5 s
+      const section = document.getElementById('banner');
+      const captions = JSON.parse(section.dataset.captions);
+      const videoEl = section.querySelector('video');
+      const sourceEl = videoEl.querySelector('source');
+      const overlay = section.querySelector('.overlay');
+      const changeInterval = 5000; // 5 s
 
-    function updateSlide() {
-      sourceEl.src = reel[current];
-      videoEl.load();  
-      videoEl.play();
+      function updateSlide() {
+        sourceEl.src = reel[current];
+        videoEl.load();
+        videoEl.play();
 
-      videoEl.style.objectPosition = (reel[current] === topVideo) ? 'top center' : 'center center';
-      section.classList.toggle('fade-sides', reel[current] === fadeVideo);
-      section.classList.toggle('portrait-wide', reel[current] === portraitWideVideo);
+        videoEl.style.objectPosition = (reel[current] === topVideo) ? 'top center' : 'center center';
+        section.classList.toggle('fade-sides', reel[current] === fadeVideo);
+        section.classList.toggle('portrait-wide', reel[current] === portraitWideVideo);
 
-      // Actualiza caption
-      const caption = captions[current];
-      if (caption) {
-        const [title, ...subtitleParts] = caption.split('\n');
-        overlay.innerHTML = `
+        // Actualiza caption
+        const caption = captions[current];
+        if (caption) {
+          const [title, ...subtitleParts] = caption.split('\n');
+          overlay.innerHTML = `
           <div class="title">${title}</div>
           <div class="subtitle">
-            ${subtitleParts.map((text, i) => 
-              `<span class="${i === 0 ? 'big' : 'small'}">${text}</span>`
-            ).join('')}
+            ${subtitleParts.map((text, i) =>
+            `<span class="${i === 0 ? 'big' : 'small'}">${text}</span>`
+          ).join('')}
           </div>
         `;
-      } else {
-        overlay.innerHTML = '';
+        } else {
+          overlay.innerHTML = '';
+        }
       }
-    }
 
-    
-    // Inicializa
-    updateSlide();
 
-    // Ciclo
-    setInterval(() => {
-      current = (current + 1) % reel.length;
+      // Inicializa
       updateSlide();
-    }, changeInterval);
-  })();
+
+      // Ciclo
+      setInterval(() => {
+        current = (current + 1) % reel.length;
+        updateSlide();
+      }, changeInterval);
+    })();
   </script>
 
-// CALCULAR
-<script>
-  function setHeaderH(){
-    const h = document.querySelector('header').offsetHeight + 'px';
-    document.documentElement.style.setProperty('--header-h', h);
-  }
-  addEventListener('load', setHeaderH);
-  addEventListener('resize', setHeaderH);
-</script>
+  // CALCULAR
+  <script>
+    function setHeaderH() {
+      const h = document.querySelector('header').offsetHeight + 'px';
+      document.documentElement.style.setProperty('--header-h', h);
+    }
+    addEventListener('load', setHeaderH);
+    addEventListener('resize', setHeaderH);
+  </script>
 
 
 </body>
+
 </html>

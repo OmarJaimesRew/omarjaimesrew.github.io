@@ -14,8 +14,19 @@
 
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Play:wght@700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/estilos.css">
-	
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/banner.css">
+	<link rel="stylesheet" href="css/blog.css">
+	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="css/home.css">
+
 
 </head>
 
@@ -49,16 +60,23 @@
 	</header>
 
 	<main>
-	
+
 
 		<br><br><br>
-	
-   <section id="blog">
-			<div class="contenedor">
-<br><br><br><br>
 
-				<h3>En construcción....</h3>
+		<section id="blog">
+			<div class="contenedor">
+				<br><br>
+				<h2 style="text-align: center; margin-bottom: 2em; color: #fd054f;">NOTICIAS & ACTUALIZACIONES</h2>
+
+				<!-- Contenedor donde se cargarán las noticias dinámicamente -->
+				<div id="blog-container"></div>
+
+			</div>
 		</section>
+
+		<!-- Script para cargar el blog -->
+		<script src="js/blog-loader.js"></script>
 
 
 
